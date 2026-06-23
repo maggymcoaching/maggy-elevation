@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevation — Programme 8 Semaines en Santé Globale | Maggy M Coaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #8B7355;
+            --gold-light: #A08968;
+            --gold-dark: #6B5640;
+            --cream: #FAFBF9;
+            --cream-dark: #F0F2EE;
+            --charcoal: #1C2B22;
+            --charcoal-light: #3D4F44;
+            --sage: #5A7263;
+            --sage-light: #7A9485;
+            --blush: #E8ECE9;
+            --navy: #1B3329;
+            --navy-light: #243D30;
+            --bronze: #6B5640;
+            --forest: #2A5A3F;
+            --forest-deep: #1B3A2A;
+            --forest-light: #3D7556;
+            --stone: #8A9690;
+            --mist: #F4F6F4;
+            --white: #FFFFFF;
+            --shadow: rgba(28, 43, 34, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(170deg, var(--white) 0%, var(--mist) 40%, var(--cream) 100%);
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(42, 90, 63, 0.05) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(42, 90, 63, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--forest);
+            background: rgba(42, 90, 63, 0.08);
+            padding: 8px 24px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-style: italic;
+            color: var(--forest);
+            font-size: 0.85em;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            font-weight: 400;
+            color: var(--charcoal-light);
+            max-width: 580px;
+            margin: 20px auto 15px;
+            line-height: 1.8;
+        }
+
+        .hero-verse {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--charcoal-light);
+            max-width: 520px;
+            margin: 25px auto 35px;
+            padding: 20px 30px;
+            border-left: 2px solid var(--forest);
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .hero-verse cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.85rem;
+            color: var(--forest);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+            padding: 16px 48px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(42, 90, 63, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(42, 90, 63, 0.4);
+        }
+
+        .hero-limited {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--charcoal-light);
+            margin-top: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* DIVIDER */
+        .divider {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .divider span {
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background: var(--forest-light);
+            vertical-align: middle;
+            margin: 0 15px;
+        }
+
+        .divider-icon {
+            color: var(--forest);
+            font-size: 1rem;
+        }
+
+        /* INTRO SECTION */
+        .intro {
+            padding: 60px 20px 80px;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .intro-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 18px;
+        }
+
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 25px;
+            line-height: 1.35;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            color: var(--charcoal-light);
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .intro .highlight {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--forest);
+            margin: 30px 0;
+            padding: 0 20px;
+        }
+
+        /* PILLARS SECTION */
+        .pillars {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .pillars-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pillars h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 50px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 25px 35px;
+            box-shadow: 0 2px 20px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(42, 90, 63, 0.08);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(44, 44, 44, 0.1);
+        }
+
+        .pillar-icon {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            line-height: 1.7;
+        }
+
+        /* INCLUSIONS SECTION */
+        .inclusions {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .inclusions-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .inclusions h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 50px;
+        }
+
+        .inclusion-list {
+            list-style: none;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .inclusion-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(42, 90, 63, 0.12);
+            font-size: 1rem;
+            color: var(--charcoal);
+        }
+
+        .inclusion-list li:last-child {
+            border-bottom: none;
+        }
+
+        .inclusion-check {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--forest), var(--forest-deep));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .inclusion-detail {
+            font-size: 0.85rem;
+            color: var(--charcoal-light);
+            margin-top: 4px;
+        }
+
+        .addon-box {
+            margin-top: 40px;
+            background: linear-gradient(135deg, var(--cream-dark) 0%, var(--blush) 100%);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px dashed var(--forest-light);
+        }
+
+        .addon-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .addon-box p {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            padding: 80px 20px;
+            background: linear-gradient(170deg, var(--forest-deep) 0%, var(--navy) 100%);
+            text-align: center;
+        }
+
+        .pricing-inner {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .pricing .section-label {
+            color: var(--forest-light);
+        }
+
+        .pricing h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--forest), var(--forest-light), var(--forest));
+        }
+
+        .pricing-duration {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 20px;
+        }
+
+        .pricing-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+
+        .pricing-amount sup {
+            font-size: 1.5rem;
+            top: -1.2em;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--charcoal-light);
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 35px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pricing-features li::before {
+            content: '✦';
+            color: var(--forest);
+            font-size: 0.7rem;
+        }
+
+        .promo-box {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 30px;
+        }
+
+        .promo-box p {
+            font-size: 0.85rem;
+            color: var(--charcoal-light);
+            margin-bottom: 5px;
+        }
+
+        .promo-code {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--forest);
+            letter-spacing: 3px;
+        }
+
+        .promo-discount {
+            font-size: 0.8rem;
+            color: var(--charcoal-light);
+            font-weight: 500;
+        }
+
+        /* FOR YOU SECTION */
+        .for-you {
+            padding: 80px 20px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .for-you-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .for-you h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 35px;
+        }
+
+        .for-you-list {
+            list-style: none;
+            text-align: left;
+            max-width: 550px;
+            margin: 0 auto 40px;
+        }
+
+        .for-you-list li {
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--charcoal-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            line-height: 1.6;
+        }
+
+        .for-you-list li::before {
+            content: '♡';
+            color: var(--forest);
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* VALUE / INVESTMENT SECTION */
+        .value {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .value-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .value h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            line-height: 1.35;
+        }
+
+        .value-intro {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--charcoal-light);
+            max-width: 600px;
+            margin: 0 auto 45px;
+            line-height: 1.8;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .value-item {
+            padding: 28px 24px;
+            border-radius: 14px;
+            background: var(--cream);
+            border-left: 3px solid var(--forest);
+        }
+
+        .value-item-label {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 6px;
+        }
+
+        .value-item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .value-item p {
+            font-size: 0.88rem;
+            color: var(--charcoal-light);
+            line-height: 1.7;
+        }
+
+        .value-compare {
+            background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream) 100%);
+            border-radius: 16px;
+            padding: 35px 30px;
+            margin-bottom: 40px;
+        }
+
+        .value-compare h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .compare-list {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .compare-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(42, 90, 63, 0.1);
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+        }
+
+        .compare-list li:last-child {
+            border-bottom: none;
+        }
+
+        .compare-price {
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .compare-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 500px;
+            margin: 15px auto 0;
+            padding: 15px 0;
+            border-top: 2px solid var(--forest);
+            font-size: 1rem;
+        }
+
+        .compare-total span:first-child {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .compare-total span:last-child {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--forest);
+        }
+
+        .value-bottom {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--forest-deep);
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .value-bottom strong {
+            color: var(--forest);
+            font-style: normal;
+        }
+
+        .value-daily {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--forest-deep);
+            color: var(--white);
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 12px 28px;
+            border-radius: 30px;
+        }
+
+        /* SIGNATURE SECTION */
+        .signature {
+            padding: 60px 20px 80px;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .signature-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .signature-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--charcoal-light);
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .signature-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .signature-title {
+            font-size: 0.85rem;
+            color: var(--forest);
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            padding: 80px 20px;
+            background: linear-gradient(170deg, var(--cream-dark) 0%, var(--blush) 50%, var(--cream) 100%);
+            text-align: center;
+        }
+
+        .final-cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .final-cta p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--charcoal-light);
+            margin-bottom: 30px;
+        }
+
+        .spots-remaining {
+            display: inline-block;
+            background: rgba(42, 90, 63, 0.1);
+            color: var(--forest);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            padding: 10px 24px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--forest-deep);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--forest-light);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .pillar-card {
+                padding: 25px 18px;
+            }
+
+            .pricing-card {
+                padding: 35px 25px;
+            }
+
+            .pricing-amount {
+                font-size: 2.8rem;
+            }
+
+            .hero-verse {
+                padding: 15px 20px;
+            }
+
+            .cta-button {
+                padding: 14px 36px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        /* NAVIGATION BAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(28, 43, 34, 0.05);
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            text-decoration: none;
+        }
+
+        .navbar-login {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: var(--forest);
+            color: var(--white);
+            padding: 10px 28px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-login:hover {
+            background: var(--forest-deep);
+            transform: translateY(-2px);
+        }
+
+        /* LOGIN MODAL */
+        .login-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .login-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .login-content {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .login-close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--charcoal-light);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .login-close:hover {
+            color: var(--charcoal);
+        }
+
+        .login-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login-form input,
+        .login-form button {
+            font-family: 'Raleway', sans-serif;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--forest-light);
+            font-size: 0.95rem;
+        }
+
+        .login-form input {
+            color: var(--charcoal);
+            background: var(--cream);
+        }
+
+        .login-form input::placeholder {
+            color: var(--charcoal-light);
+        }
+
+        .login-form input:focus {
+            outline: none;
+            background: var(--white);
+            border-color: var(--forest);
+            box-shadow: 0 0 0 3px rgba(42, 90, 63, 0.1);
+        }
+
+        .login-form button {
+            background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+            color: var(--white);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .login-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(42, 90, 63, 0.3);
+        }
+
+        .login-footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--charcoal-light);
+            margin-top: 20px;
+        }
+
+        .login-footer a {
+            color: var(--forest);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adjust hero top padding */
+        .hero {
+            padding-top: 120px;
+        }
+
+        /* CTA BUTTON GROUP */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px auto 0;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--forest-light) 0%, var(--forest) 100%);
+            padding: 16px 48px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(42, 90, 63, 0.3);
+        }
+
+        .cta-button-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(42, 90, 63, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Elevation</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate delay-2">
+                Développe la discipline<br>qui change tout
+                <span>Elevation — 8 semaines</span>
+            </h1>
+            <p class="hero-subtitle animate delay-3">
+                Un programme avec enseignements en santé globale pour les femmes prêtes à apprendre et devenir autonome dans leur santé et nutrition et dans leurs habitudes de vie.
+            </p>
+            <div class="cta-group animate delay-5">
+                <a href="https://www.messenger.com/e2ee/t/7839231102813153/" target="_blank" class="cta-button">Réserve ta place <span style="font-size: 0.8em;">(Messenger)</span></a>
+                <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="cta-button-secondary">Réserve ta place <span style="font-size: 0.8em;">(Instagram)</span></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--charcoal-light); letter-spacing: 0.5px;">Les inscriptions sont ouvertes en permanence<br><span style="font-size: 0.85rem;">(écris moi pour que je t'ajoute a la plateforme)</span></p>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="divider"><span></span><span class="divider-icon">✦</span><span></span></div>
+        <div class="intro-inner">
+            <p class="section-label">Le programme</p>
+            <p>
+                Ici on est en mode <strong>solution</strong>. Elevation, c'est 8 semaines pour développer la maîtrise de ta santé, bâtir des habitudes saines et cultiver l'amour de toi-même.
+            </p>
+            <p class="highlight">
+                « Quand tu prends soin de toi avec discipline et amour, tu deviens une lumière qui éclaire le chemin — le tien et celui des autres. »
+            </p>
+            <p>
+                Pendant 8 semaines, je t'accompagne avec 4 courtes capsules vidéos par semaines + une rencontre en live,  qui touche chaque dimension de ta santé : ton corps, ton mindset, ton bien-être. Des capsules éducatives, du coaching de groupe pour des habitudes qui durent.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4 PILIERS -->
+    <section class="pillars">
+        <div class="pillars-inner">
+            <p class="section-label">Les 4 dimensions</p>
+            <h2>Une approche qui touche tout ton être</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card animate">
+                    <span class="pillar-icon">💪</span>
+                    <h3>Santé physique</h3>
+                    <p>Nutrition, mouvement, énergie — construis les habitudes qui te donnent du fuel pour performer dans ta vie quotidienne.</p>
+                </div>
+                <div class="pillar-card animate delay-1">
+                    <span class="pillar-icon">🧠</span>
+                    <h3>Santé intérieure</h3>
+                    <p>Mindset, discipline, gestion du stress — développe la force mentale qui te garde constante, même les jours difficiles.</p>
+                </div>
+                <div class="pillar-card animate delay-2">
+                    <span class="pillar-icon">✨</span>
+                    <h3>Santé extérieure</h3>
+                    <p>Confiance, image, rayonnement — quand tu te sens bien de l'intérieur, ça se voit et ça inspire autour de toi.</p>
+                </div>
+                <div class="pillar-card animate delay-3">
+                    <span class="pillar-icon">🌿</span>
+                    <h3>Ouverture spirituelle</h3>
+                    <p>Connexion avec toi-même, réflexions inspirantes — nourris cette dimension pour garder le cap sur ce qui compte vraiment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CE QUI EST INCLUS -->
+    <section class="inclusions">
+        <div class="inclusions-inner">
+            <p class="section-label">Ce qui est inclus</p>
+            <h2>Ton parcours de 8 semaines</h2>
+            <ul class="inclusion-list">
+                <li>
+                    <span class="inclusion-check">✓</span>
+                    <div>
+                        <strong>4 capsules éducatives par semaine</strong>
+                        <p class="inclusion-detail">Vidéos pré-enregistrées sur la nutrition, les saines habitudes de vie, le mindset, la confiance en soi et plus encore.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="inclusion-check">✓</span>
+                    <div>
+                        <strong>1 rencontre de groupe par semaine</strong>
+                        <p class="inclusion-detail">Session live de questions / réponses pour garder ton momentum et avancer concrètement chaque semaine.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="inclusion-check">✓</span>
+                    <div>
+                        <strong>1 réflexion inspirante par semaine</strong>
+                        <p class="inclusion-detail">Une dose de motivation et d'inspiration pour garder le feu allumé et te rappeler pourquoi tu fais tout ça.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="inclusion-check">✓</span>
+                    <div>
+                        <strong>Accès au groupe semi-privé</strong>
+                        <p class="inclusion-detail">Une communauté de femmes motivées via l'application Hexfit pour se pousser, s'encourager et se tenir redevables.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="inclusion-check">✓</span>
+                    <div>
+                        <strong>Suivi et accompagnement pendant 8 semaines</strong>
+                        <p class="inclusion-detail">Tu peux m'écrire en tout temps pendant ces 8 semaines!</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="addon-box">
+                <h3>✦ Option additionnelle — Programme d'entraînement</h3>
+                <p>Tu veux aussi bouger ton corps ? Ajoute un programme d'entraînement personnalisé pour passer au niveau supérieur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POUR QUI -->
+    <section class="for-you">
+        <div class="for-you-inner">
+            <p class="section-label">C'est pour toi si…</p>
+            <h2>Ce parcours est fait pour toi si&hellip;</h2>
+            <ul class="for-you-list">
+                <li>Tu es prête à développer la discipline de prendre soin de toi pour vrai</li>
+                <li>Tu veux bâtir des habitudes saines qui tiennent — pas juste un rush de motivation</li>
+                <li>Tu sais que quand TU vas bien, tout le monde autour de toi en bénéficie</li>
+                <li>Tu as besoin de structure, d'accountability et d'un groupe qui te pousse</li>
+                <li>Tu veux une coach en santé globale qui te motive et qui comprend tes réalités</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- POURQUOI INVESTIR -->
+    <section class="value">
+        <div class="value-inner">
+            <p class="section-label">Pourquoi investir en toi</p>
+            <h2>Ce n'est pas une dépense.<br>C'est le meilleur investissement que tu peux faire — en toi.</h2>
+            <p class="value-intro">
+                Tu investis déjà du temps et de l'argent dans mille choses. Imagine ce qui se passe quand tu investis dans TA santé, TES habitudes et TA maîtrise de vie — l'impact se multiplie dans toutes les sphères autour de toi.
+            </p>
+
+            <div class="value-grid">
+                <div class="value-item">
+                    <p class="value-item-label">Accompagnement</p>
+                    <p class="value-item-title">Une coach, pas juste du contenu</p>
+                    <p>Tu n'es pas laissée seule avec des vidéos. Tu as une coach en santé globale, un groupe motivant et un rendez-vous chaque semaine pour garder le cap.</p>
+                </div>
+                <div class="value-item">
+                    <p class="value-item-label">Accountability</p>
+                    <p class="value-item-title">Un groupe qui te pousse vers le haut</p>
+                    <p>C'est prouvé : on tient nos habitudes quand on est entourées. Ici, tu avances avec des femmes qui se motivent et se tiennent redevables.</p>
+                </div>
+                <div class="value-item">
+                    <p class="value-item-label">Résultats</p>
+                    <p class="value-item-title">Des habitudes qui restent après le programme</p>
+                    <p>En 8 semaines, tu ne repars pas avec des notes. Tu repars avec des habitudes solides, plus d'énergie et la discipline de prendre soin de toi — pour toi et pour ceux que tu aimes.</p>
+                </div>
+            </div>
+
+            <div class="value-compare">
+                <h3>La valeur réelle de ce que tu reçois</h3>
+                <ul class="compare-list">
+                    <li><span>32 capsules éducatives (vidéo)</span> <span class="compare-price">400 $</span></li>
+                    <li><span>8 rencontres de groupe live</span> <span class="compare-price">480 $</span></li>
+                    <li><span>8 réflexions inspirantes guidées</span> <span class="compare-price">160 $</span></li>
+                    <li><span>Accès au groupe semi-privé (8 sem.)</span> <span class="compare-price">200 $</span></li>
+                    <li><span>Suivi et accompagnement par une coach N.D.</span> <span class="compare-price">400 $</span></li>
+                </ul>
+                <div class="compare-total">
+                    <span>Valeur totale</span>
+                    <span>1 640 $+</span>
+                </div>
+            </div>
+
+            <p class="value-bottom">
+                Ton investissement : <strong>199 $ par mois * taxes</strong> <span style="font-weight: 400; font-style: italic;">(prix de lancement!)</span> — une fraction de la valeur réelle, parce que je veux que chaque femme prête à passer à l'action puisse y avoir accès.
+            </p>
+            <span class="value-daily">Ça revient à environ 8 $ par jour — moins qu'un café et un muffin.</span>
+        </div>
+    </section>
+
+    <!-- TARIFICATION -->
+    <section class="pricing" id="inscription">
+        <div class="pricing-inner">
+            <p class="section-label">Investis en toi</p>
+            <h2>Ton investissement</h2>
+            <div class="pricing-card">
+                <p class="pricing-duration">Programme de 8 semaines</p>
+                <p class="pricing-amount"><sup>$</sup>199<br><span style="font-size: 0.5em; font-weight: 400; font-style: italic;">(prix de lancement!)</span></p>
+                <p class="pricing-period">par mois * taxes</p>
+                <ul class="pricing-features">
+                    <li>4 capsules éducatives par semaine</li>
+                    <li>1 rencontre de groupe live par semaine</li>
+                    <li>1 réflexion inspirante hebdomadaire</li>
+                    <li>Accès au groupe semi-privé sur Hexfit</li>
+                    <li>Option d'ajouter un programme d'entraînement</li>
+                </ul>
+                <div class="promo-box">
+                    <p>Code promo <a href="https://www.atplab.com" target="_blank" style="color: var(--forest); font-weight: 600; text-decoration: underline;">ATP Lab</a> — 15 % de rabais</p>
+                    <span class="promo-code">MM15</span><br>
+                    <span class="promo-discount">Utilise ce code sur <a href="https://www.atplab.com" target="_blank" style="color: var(--forest);">www.atplab.com</a></span>
+                    <p style="margin-top: 12px; font-size: 0.85rem; color: var(--charcoal); font-style: italic;">Contactes moi pour toutes questions / conseils sur tes supplements</p>
+                </div>
+                <div class="cta-group">
+                    <a href="https://www.messenger.com/e2ee/t/7839231102813153/" target="_blank" class="cta-button">Je m'inscris <span style="font-size: 0.8em;">(Messenger)</span></a>
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="cta-button-secondary">Je m'inscris <span style="font-size: 0.8em;">(Instagram)</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE -->
+    <section class="signature">
+        <div class="signature-inner">
+            <div class="divider"><span></span><span class="divider-icon">✦</span><span></span></div>
+            <p class="signature-text">
+                J'ai créé Elevation parce que je sais que quand une femme développe la discipline de prendre soin d'elle, elle ne change pas juste sa santé — elle change l'énergie qu'elle déverse dans tout ce qu'elle touche.
+            </p>
+            <p class="signature-name">~Maggy M</p>
+            <p class="signature-title">Coach en santé globale, N.D.</p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="final-cta-inner">
+            <h2>Prête à passer à l'action ?</h2>
+            <p>Rejoins les femmes motivées qui, comme toi, veulent bâtir des habitudes solides et rayonner dans chaque sphère de leur vie.</p>
+            <div class="cta-group">
+                <a href="https://www.messenger.com/e2ee/t/7839231102813153/" target="_blank" class="cta-button">Réserve ta place <span style="font-size: 0.8em;">(Messenger)</span></a>
+                <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="cta-button-secondary">Réserve ta place <span style="font-size: 0.8em;">(Instagram)</span></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--charcoal-light); letter-spacing: 0.5px;">Écris moi personnellement et nous débutons ! Je t'ajoute au groupe</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 15px; opacity: 0.9;">
+            « Je prie pour que les yeux de votre cœur soient éclairés, afin que vous sachiez quelle est l'espérance de son appel. »<br>
+            <span style="font-size: 0.85rem;">— Éphésiens 1:18</span>
+        </p>
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: rgba(255, 255, 255, 0.9); margin-bottom: 20px;">
+            Place-toi au centre de ton coeur.<br>Le reste suit.
+        </p>
+        <p>&copy; 2026 Maggy M Coaching — Tous droits réservés<br>
+        <a href="https://beacons.ai/maggycoaching">beacons.ai/maggycoaching</a></p>
+    </footer>
+
+    <!-- SCROLL ANIMATIONS & LOGIN -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Login Modal Functions
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.add('active');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('Connexion en cours...');
+            // Add your login logic here
+            closeLoginModal();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                closeLoginModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
